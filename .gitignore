@@ -1,0 +1,21 @@
+# Ignore Tomcat installation and runtime files
+apache-tomcat-10.1.48/
+apache-tomcat-*/
+
+# Ignore temporary build/output files
+*.log
+*.tmp
+*.class
+*.war
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code workspace settings
+.vscode/
+
+# Ignore server auto-deploy files
+work/
+temp/
+logs/
