@@ -1,0 +1,120 @@
+/* styles.css */
+
+/* Global */
+:root {
+  --ink: #1f2937;
+  --muted-ink: #4b5563;
+  --accent: #2563eb;
+  --table-stripe: #f3f4f6;
+  --group-bg: #e5e7eb;
+  --chip-bg: #eef2ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  margin: 2rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+header h1 {
+  margin: 0 0 .25rem 0;
+  font-size: 1.875rem;
+}
+
+.subtitle {
+  color: var(--muted-ink);
+  margin-bottom: 1rem;
+}
+
+.meta {
+  margin: .25rem 0 1.25rem 0;
+  color: var(--muted-ink);
+  font-size: .95rem;
+}
+
+.description {
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: .5rem .75rem;
+  margin: .5rem 0 0 0;
+  font-size: .95rem;
+}
+
+.fields .key {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+thead th {
+  text-align: left;
+  background: #f8fafc;
+  padding: .75rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:nth-child(odd) td {
+  background: var(--table-stripe);
+}
+
+td {
+  padding: .75rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.group-row td {
+  background: var(--group-bg) !important;
+  font-weight: 700;
+  border-top: 2px solid #d1d5db;
+}
+
+.chip {
+  display: inline-block;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  font-size: .85rem;
+  border: 1px solid #e0e7ff;
+}
+
+.footer-note {
+  margin-top: 1rem;
+  font-size: .9rem;
+  color: var(--muted-ink);
+}
+
+/* Visually hidden utility for caption */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
