@@ -53,9 +53,10 @@
             rs.close();
             ps.close();
             conn.close();
-        } catch (Exception e) {
-            e.printStackTrace(out);
-        }
+      } catch (Exception e) {
+    e.printStackTrace();
+}
+
     %>
 
     <!-- Form posts the selected movieId to displayMovie.jsp -->

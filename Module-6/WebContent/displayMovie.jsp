@@ -59,16 +59,12 @@
                     mpaaRating = rs.getString("mpaa_rating");
                     runtimeMinutes = rs.getInt("runtime_minutes");
                     found = true;
-                }
-
-                rs.close();
-                ps.close();
-                conn.close();
-            } catch (Exception e) {
-                e.printStackTrace(out);
-            }
-        }
-    %>
+                   } catch (Exception e) {
+        try { if (ps != null) ps.close(); } catch (Exception ignore) {}
+        try { if (conn != null) conn.close(); } catch (Exception ignore) {}
+        e.printStackTrace();   // <--- NO "out" here
+    }
+%>
 
     <%
         // If no movie was found, display a friendly message
